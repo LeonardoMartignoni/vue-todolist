@@ -38,7 +38,7 @@ createApp({
         },
         {
           text: "Tagliare l'erba",
-          done: false,
+          done: true,
         },
       ],
     };
