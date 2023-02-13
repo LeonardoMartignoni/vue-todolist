@@ -41,12 +41,22 @@ createApp({
           done: true,
         },
       ],
+      newTask: "",
     };
   },
 
   methods: {
     removeTask(i) {
       this.tasks.splice(i, 1);
+    },
+
+    addTask() {
+      const addedTask = {
+        text: this.newTask,
+        done: false,
+      };
+
+      this.tasks.push(addedTask);
     },
   },
 }).mount("#app");
