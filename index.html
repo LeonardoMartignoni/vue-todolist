@@ -32,7 +32,7 @@
 
 			<div class="input-group mt-5">
 				<input type="text" class="form-control" placeholder="Write your next task" aria-label="Write your next task"
-					aria-describedby="button-addon2" v-model="newTask">
+					aria-describedby="button-addon2" v-model="newTask" @keyUp.enter="addTask()">
 				<button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="addTask()">Add task</button>
 			</div>
 
