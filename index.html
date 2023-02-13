@@ -41,7 +41,7 @@
 
 			<ul class="list-group">
 				<li class="list-group-item d-flex justify-content-between align-items-center" v-for="(task, index) in tasks"
-					:class="{'text-decoration-line-through': task.done}">
+					:class="{'text-decoration-line-through': task.done}" @click="task.done = !task.done">
 					{{ task.text }}
 					<span class="badge bg-danger rounded-pill" @click="removeTask(index)">
 						<div class="fa fa-times"></div>
