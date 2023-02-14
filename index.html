@@ -37,13 +37,14 @@
 			</div>
 
 
-			<h2 class="my-3">Todo list</h2>
+			<h2 class="my-3">Your next tasks:</h2>
 
 			<ul class="list-group">
-				<li class="list-group-item d-flex justify-content-between align-items-center" v-for="(task, index) in tasks"
-					:class="{'text-decoration-line-through': task.done}" @click="task.done = !task.done">
+				<li class="task_text list-group-item d-flex justify-content-between align-items-center"
+					v-for="(task, index) in tasks" :class="{'text-decoration-line-through': task.done}"
+					@click="task.done = !task.done">
 					{{ task.text }}
-					<span class="badge bg-danger rounded-pill" @click="removeTask(index)">
+					<span class="delete_badge badge bg-danger rounded-pill" @click="removeTask(index)">
 						<div class="fa fa-times"></div>
 					</span>
 				</li>
